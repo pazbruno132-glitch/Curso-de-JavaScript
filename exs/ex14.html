@@ -8,8 +8,8 @@
 <body>
     <script>
         var nome = window.prompt('Qual é o seu nome ?')
-        var idade = window.prompt('Quantos anos você tem ?')
-        window.alert(`Olá, ${nome}! Você tem ${idade} anos.`)
+        var sal = Number(window.prompt('Qual é o seu salario ?'))
+        window.alert(`${nome} recebe ${sal.toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})} por mês.`)
     </script>
 </body>
 </html>

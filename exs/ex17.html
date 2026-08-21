@@ -8,8 +8,9 @@
 <body>
     <script>
         var nome = window.prompt('Qual é o seu nome ?')
-        var idade = window.prompt('Quantos anos você tem ?')
-        window.alert(`Olá, ${nome}! Você tem ${idade} anos.`)
+        var nota = Number(window.prompt('Quanto foi sua nota ?'))
+        window.alert(`Nome: ${nome}
+Nota: ${nota.toFixed(2).replace('.',',')}`)
     </script>
 </body>
 </html>
