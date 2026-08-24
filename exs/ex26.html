@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            width: 100vw;
+            height: 100vh;
+            background-color: gray;
+        }
+
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 300px;
+            background-color: blue;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="div" onclick="clicou()" onmouseenter="entrou()" onmouseout="saiu()">Passe o mouse aqui</div>
+    <script>
+        var d1 = window.document.getElementById('div')
+
+        function clicou() {
+            d1.innerText = 'Você clicou!'
+        }
+        function entrou() {
+            d1.innerText = 'Mouse entrou!'
+        }
+        function saiu() {
+            d1.innerText = 'Mouse saiu!'
+        }
+    </script>
+</body>
+</html>

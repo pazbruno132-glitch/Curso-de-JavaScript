@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <input type="number" name="tx1" id="tx1"> +
+    <input type="number" name="tx2" id="tx2">
+    <input type="button" value="Somar" onclick="somar()">
+    <script>
+        function somar() {
+            var tx1 = window.document.getElementById('tx1')
+            var tx2 = window.document.getElementById('tx2')
+            var n1 = Number(tx1.value)
+            var n2 = Number(tx2.value)
+            var s = n1 + n2
+            window.alert(`A soma entre ${n1} e ${n2} é:  ${s}`)
+        }
+    </script>
+</body>
+</html>
