@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <input type="text" name="tx1" id="tx1">
+    <button id="botao" onclick="nome()">Mostrar nome</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function nome() {
+            var i1 = document.getElementById('tx1')
+            var b1 = document.getElementById('botao')
+            var p1 = document.getElementById('resultado')
+            p1 = i1.value
+            document.getElementById('resultado').innerText = p1
+        }
+    </script>
+</body>
+</html>

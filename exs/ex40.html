@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p id="texto">Clique no botão para mudar minha cor.</p>
+    <button id="botao" onclick="clicar()">Mudar cor</button>
+    <script>
+        function clicar() {
+            var p1 = document.getElementById('texto')
+            var b1 = document.getElementById('botao')
+
+            p1.style.color = 'red'
+            p1.style.fontSize = '25px'
+        }
+    </script>
+</body>
+</html>
