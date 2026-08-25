@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1 id="titulo">Minha página</h1>
+    <p class="texto">Estou aprendendo HTML</p>
+    <p class="texto">Estou aprendendo CSS</p>
+    <p class="texto">Estou aprendendo JavaScript</p>
+
+    <script>
+        var t1 = window.document.getElementById('titulo')
+        var p1 = window.document.getElementsByClassName('texto')[0]
+        var p2 = window.document.getElementsByClassName('texto')[1]
+        var p3 = window.document.getElementsByClassName('texto')[2]
+
+        t1.innerText = 'Minha Jornada na Programação'
+        t1.style.fontSize = '30px'
+        p1.ineerText = 'HTML cria a estrutura'
+        p1.style.fontSize = '20px'
+        p2.ineerText = 'CSS cria o visual'
+        p2.style.fontSize = '20px'
+        p3.ineerText = 'JavaScript cria a interação'
+        p3.style.fontSize = '20px'
+
+    </script>
+</body>
+</html>
