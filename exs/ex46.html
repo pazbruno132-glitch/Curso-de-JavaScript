@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1 id="titulo">Minha página</h1>
+
+    <button id="botao" onclick="clicar()">Clique aqui</button>
+
+    <script>
+        function clicar() {
+            var t1 = document.getElementById('titulo')
+
+            t1.innerText = 'JavaScript está funcionando!'
+            t1.style.fontSize = '40px'
+            t1.style.color = 'green'
+        }
+    </script>
+</body>
+</html>
