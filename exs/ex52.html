@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <input type="password" name="ps1" id="ps1">
+    <button onclick="senha()">Entrar</button>
+    <p id="res"></p>
+    
+    <script>
+        function senha() {
+        var s1 = document.getElementById('ps1')
+        var p1 = document.getElementById('res')
+        var senhaCerta = 1234
+        s1 = Number(ps1.value)
+
+        if (s1 == senhaCerta) {
+            p1.innerText = 'Acesso permitido!'
+        } else {
+            p1.innerText = 'Senha incorreta!'
+        }
+        }
+    </script>
+</body>
+</html>

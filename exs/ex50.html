@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p>Você pode votar ?</p>
+    <input type="number" name="tn1" id="tn1">
+    <button onclick="idade()">Verificar</button>
+    <p id="res"></p>
+
+    <script>
+        function idade() {
+            var n1 = document.getElementById('tn1')
+            var p1 = document.getElementById('res')
+
+            n1 = Number(tn1.value)
+
+            if (n1 >= 18) {
+                p1.innerHTML = 'Você pode votar.'
+            } else {
+                p1.innerHTML = 'Você ainda não pode votar.'
+            }
+        }
+    </script>
+</body>
+</html>

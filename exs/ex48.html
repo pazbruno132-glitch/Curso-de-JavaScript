@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p>Quantos anos você têm ?</p>
+    <input type="number" name="tn1" id="tn1">
+
+    <button onclick="idade()">Verificar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function idade() {
+            var n1 = document.getElementById('tn1')
+            var p1 = document.getElementById('resultado')
+            n1 = Number(tn1.value)
+
+            if (n1 >= 18) {
+                p1.innerHTML = `<p>Você é maior de idade!</p>`
+            } else {
+                p1.innerHTML = `<p>Você é menor de idade!</p>`
+            }
+        }
+    </script>
+</body>
+</html>

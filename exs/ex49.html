@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <input type="number" name="tn1" id="tn1">
+    <button onclick="inteiro()">Verificar número</button>
+    <p id="res"></p>
+
+    <script>
+        function inteiro() {
+            var n1 = document.getElementById('tn1')
+            var p1 = document.getElementById('res')
+            n1 = Number(tn1.value)
+
+            if (n1 >= 0) {
+                p1.innerHTML = 'Número positivo ou zero.'
+            } else {
+                p1.innerHTML = 'Número negativo.'
+            }
+        }
+    </script>
+</body>
+</html>
