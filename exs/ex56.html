@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p>Que nota você tirou ?</p>
+    <input type="number" name="nt1" id="nt1" required max="10" min="0">
+    <button onclick="media()">Enviar</button>
+    <p id="res"></p>
+
+    <script>
+        function media() {
+            var n1 = document.getElementById('nt1')
+            var p1 = document.getElementById('res')
+            n1 = Number(nt1.value)
+
+            if (n1 >= 7) {
+                p1.innerText = 'Aprovado'
+            } else if (n1 >= 5) {
+                p1.innerText = 'Recuperação'
+            } else {
+                p1.innerText = 'Reprovado'
+            }
+        }
+    </script>
+</body>
+</html>

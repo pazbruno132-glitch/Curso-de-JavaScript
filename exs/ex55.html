@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p>Dia da semana (1 a 7): </p>
+    <input type="number" name="nt1" id="nt1" required max="7" min="1">
+    <button onclick="data()">Enviar</button>
+    <p id="res"></p>
+
+    <script>
+        function data() {
+            var dia = document.getElementById('nt1')
+            var p1 = document.getElementById('res')
+
+            dia = Number(nt1.value)
+
+            switch (dia) {
+                case 1:
+                    p1.innerText = 'Domingo'
+                    break
+                case 2:
+                    p1.innerText = 'Segunda'
+                    break
+                case 3:
+                    p1.innerText = 'Terça'
+                    break
+                case 4:
+                    p1.innerText = 'Quarta'
+                    break
+                case 5:
+                    p1.innerText = 'Quinta'
+                    break
+                case 6:
+                    p1.innerText = 'Sexta'
+                    break
+                case 7:
+                    p1.innerText = 'Sábado'
+                    break
+                default:
+                    p1.innerText = 'Dia inválido'
+                    break
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p>Quantos anos você tem ?</p>
+    <input type="number" name="nt1" id="nt1">
+    <button onclick="idade()">Enviar</button>
+    <p id="res"></p>
+
+    <script>
+
+        function idade() {
+            var n1 = document.getElementById('nt1')
+            var p1 = document.getElementById('res')
+            n1 = Number(nt1.value)
+
+            if (n1 < 12) {
+                p1.innerText = 'Criança'
+            } else if (n1 < 18) {
+                p1.innerText = 'Adolescente'
+            } else if (n1 < 60) {
+                p1.innerText = 'Adulto'
+            } else {
+                p1.innerText = 'Idoso'
+            }
+
+        }
+    </script>
+</body>
+</html>

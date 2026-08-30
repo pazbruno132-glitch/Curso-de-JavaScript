@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p>Escolha dois números: </p>
+    <input type="number" name="nt1" id="nt1" required>
+    <input type="number" name="nt2" id="nt2" required> <br>
+    <input type="checkbox" name="op1" id="op1" required>Somar <br>
+    <input type="checkbox" name="op2" id="op2" required>Subtrair <br>
+    <input type="checkbox" name="op3" id="op3" required>Multiplicar <br>
+    <input type="checkbox" name="op4" id="op4" required>Dividir <br>
+    <button onclick="conta()">Enviar</button>
+    <p id="res"></p>
+
+
+    <script>
+        function conta() {
+            var n1 = document.getElementById('nt1')
+            var n2 = document.getElementById('nt2')
+            var f1 = document.getElementById('op1')
+            var f2 = document.getElementById('op2')
+            var f3 = document.getElementById('op3')
+            var f4 = document.getElementById('op4')
+            var p1 = document.getElementById('res')
+
+            n1 = Number(nt1.value)
+            n2 = Number(nt2.value)
+
+            f1 = n1 + n2
+            f2 = n1 - n2
+            f3 = n1 * n2
+            f4 = n1 / n2
+
+            if (n1 + n2)
+            p1.innerText = f1
+        }
+    </script>
+</body>
+</html>
