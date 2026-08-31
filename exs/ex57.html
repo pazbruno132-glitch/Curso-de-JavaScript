@@ -6,37 +6,83 @@
     <title>JavaScript</title>
 </head>
 <body>
-    <p>Escolha dois números: </p>
-    <input type="number" name="nt1" id="nt1" required>
-    <input type="number" name="nt2" id="nt2" required> <br>
-    <input type="checkbox" name="op1" id="op1" required>Somar <br>
-    <input type="checkbox" name="op2" id="op2" required>Subtrair <br>
-    <input type="checkbox" name="op3" id="op3" required>Multiplicar <br>
-    <input type="checkbox" name="op4" id="op4" required>Dividir <br>
-    <button onclick="conta()">Enviar</button>
+    <p>Digite dois números: </p>
+    <input type="number" name="nt1" id="nt1" required> +
+    <input type="number" name="nt2" id="nt2" required> =
+    <button onclick="somar()">Somar</button>
     <p id="res"></p>
 
+    <p>Digite dois números: </p>
+    <input type="number" name="nt3" id="nt3"> -
+    <input type="number" name="nt4" id="nt4"> =
+    <button onclick="subtrair()">Subtrair</button>
+    <p id="res2"></p>
+
+    <p>Digite dois números: </p>
+    <input type="number" name="nt5" id="nt5"> x
+    <input type="number" name="nt6" id="nt6"> =
+    <button onclick="multiplicar()">Multiplicar</button>
+    <p id="res3"></p>
+
+    <p>Digite dois números: </p>
+    <input type="number" name="nt7" id="nt7"> /
+    <input type="number" name="nt8" id="nt8"> =
+    <button onclick="dividir()">Dividir</button>
+    <p id="res4"></p>
 
     <script>
-        function conta() {
+        function somar() {
             var n1 = document.getElementById('nt1')
             var n2 = document.getElementById('nt2')
-            var f1 = document.getElementById('op1')
-            var f2 = document.getElementById('op2')
-            var f3 = document.getElementById('op3')
-            var f4 = document.getElementById('op4')
             var p1 = document.getElementById('res')
 
             n1 = Number(nt1.value)
             n2 = Number(nt2.value)
 
-            f1 = n1 + n2
-            f2 = n1 - n2
-            f3 = n1 * n2
-            f4 = n1 / n2
+            p1 = n1 + n2
 
-            if (n1 + n2)
-            p1.innerText = f1
+            document.getElementById('res').innerText = p1
+        }
+
+        function subtrair() {
+            var n3 = document.getElementById('nt3')
+            var n4 = document.getElementById('nt4')
+            var p2 = document.getElementById('res2')
+
+            n3 = Number(nt3.value)
+            n4 = Number(nt4.value)
+
+            p2 = n3 - n4
+
+            document.getElementById('res2').innerText = p2
+        }
+
+        function multiplicar() {
+            var n5 = document.getElementById('nt5')
+            var n6 = document.getElementById('nt6')
+            var p3 = document.getElementById('res3')
+
+            n5 = Number(nt5.value)
+            n6 = Number(nt6.value)
+
+            p3 = n5 * n6
+
+            document.getElementById('res3').innerText = p3
+        }
+
+        function dividir() {
+            var n7 = document.getElementById('nt7')
+            var n8 = document.getElementById('nt8')
+            var p4 = document.getElementById('res4')
+
+            n7 = Number(nt7.value)
+            n8 = Number(nt8.value)
+
+            p4 = n7 / n8
+
+            document.getElementById('res4').innerText = p4
+
+
         }
     </script>
 </body>
