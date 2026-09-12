@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+        var nome = prompt('Qual é o seu nome ?')
+        var altura = Number(prompt('Qual é a sua altura em centímetros ?'))
+        var peso = Number(prompt('Quanto você pesa ?'))
+        var classificacao = null
+
+        altura /= 100
+
+        var m = peso / altura**2
+
+        if (m < 16) {
+
+            classificacao = 'Baixo peso muito grave'
+
+        } else if (m >= 16 && m < 17) {
+
+            classificacao = 'Baixo peso grave'
+
+        } else if (m >= 17 && m < 18.5) {
+    
+            classificacao = 'Baixo peso'
+
+        } else if (m >= 18.5 && m < 25) {
+
+            classificacao = 'Peso normal'
+
+        } else if (m >= 25 && m < 30) {
+
+            classificacao = 'Sobrepeso'
+
+        } else if (m >= 30 && m < 35) {
+
+            classificacao = 'Obesidade grau I'
+
+        } else if (m >= 35 && m < 40) {
+
+            classificacao = 'Obesidade grau II'
+
+        } else if (m >= 40) {
+
+            classificacao = 'Obesidade grau III'
+
+        } else {
+
+            classificacao = 'Inválido'
+
+        }
+
+        alert(`${nome} você possui índice de massa corporal igual a ${m.toFixed(2).replace('.' , ',')}, sendo classificado como: ${classificacao}`)
+
+    </script>
+</body>
+</html>
