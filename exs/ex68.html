@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+        function verificarNumero(numero) {
+
+            if (numero > 0) {
+                return 'Positivo'
+            } else if(numero < 0) {
+                return 'Negativo'
+            } else if(numero == 0){
+                return 'Zero'
+            } else{
+                return 'Invalido'
+            }
+        }
+
+        const res = verificarNumero(-5)
+
+        console.log(res)
+    </script>
+</body>
+</html>

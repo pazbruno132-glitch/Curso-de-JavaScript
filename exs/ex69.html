@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+        function verificarNota(n1, n2 ,n3) {
+            
+            var media = (n1 + n2 + n3) / 3
+
+            if (media >= 7) {
+                return 'Aprovado'
+            } else {
+                return 'Reprovado'
+            }
+
+            const res = verificarNota(8, 7, 9)
+
+            console.log(res)
+        }
+    </script>
+</body>
+</html>
