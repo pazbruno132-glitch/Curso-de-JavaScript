@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+  </head>
+  <body>
+    <h1 id="titulo">Meu site</h1>
+
+    <p id="mensagem">Olá!</p>
+
+    <div id="area">Área</div>
+
+    <script>
+      let titulo = document.getElementById("titulo");
+      let p1 = document.getElementById("mensagem");
+      let area = document.getElementById("area");
+
+      titulo.innerText = "Meu site Firmados";
+      titulo.style.color = "blue";
+
+      p1.innerText = "Aprendendo DOM com JavaScript!";
+      p1.style.fontSize = "20px";
+
+      area.innerText = "Área modificada pelo JavaScript";
+      area.style.backgroundColor = "black";
+      area.style.color = "white";
+    </script>
+  </body>
+</html>

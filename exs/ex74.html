@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+  </head>
+  <body>
+    <input type="text" id="nome" placeholder="Digite seu nome" />
+
+    <button id="botao">Enviar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+      let nome = document.getElementById("nome");
+      let botao = document.getElementById("botao");
+      let res = document.getElementById("resultado");
+
+      botao.addEventListener("click", clicar);
+
+      let n1 = nome.value;
+
+      function clicar() {
+        res.innerHTML = `Olá, ${n1} !`;
+      }
+    </script>
+  </body>
+</html>
