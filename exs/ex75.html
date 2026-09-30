@@ -8,21 +8,25 @@
   <body>
     <input type="text" id="nome" placeholder="Digite seu nome" />
 
+    <input type="number" id="idade" placeholder="Digite sua idade" />
+
     <button id="botao">Enviar</button>
 
     <p id="resultado"></p>
 
     <script>
       let nome = document.getElementById("nome");
+      let idade = document.getElementById("idade");
       let botao = document.getElementById("botao");
       let res = document.getElementById("resultado");
 
       botao.addEventListener("click", clicar);
 
       function clicar() {
-        let valor = nome.value;
+        let n1 = nome.value;
+        let i1 = Number(idade.value);
 
-        res.innerText = "Olá, " + valor + "!";
+        res.innerText = `Olá, ${n1}! Você tem ${i1} anos.`;
       }
     </script>
   </body>

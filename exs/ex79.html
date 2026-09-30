@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: skyblue;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      h1 {
+        color: white;
+        text-align: center;
+        margin-top: 30px;
+        font-size: 2.6em;
+      }
+
+      #container {
+        background-color: white;
+        width: 600px;
+        border-radius: 20px;
+        margin: auto;
+        padding: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      div {
+        text-align: center;
+        margin-bottom: -50px;
+      }
+
+      p {
+        text-align: center;
+        color: white;
+        font-style: italic;
+        font-size: 1.1em;
+      }
+    </style>
+  </head>
+  <body onload="carregar()">
+    <h1>Hora do Dia</h1>
+    <div id="container">
+      <div id="msg"></div>
+      <div id="foto"><img id="img" src="" alt="" /></div>
+    </div>
+    <p>&copy; CursoemVideo</p>
+
+    <script>
+      function carregar() {
+        let agora = new Date();
+        let hora = agora.getHours();
+        let msg = document.getElementById("msg");
+        let foto = document.getElementById("foto");
+        let img = document.getElementById("img");
+
+        if (hora >= 0 && hora < 12) {
+          msg.innerText = `Agora são ${hora} horas`;
+          img.src = "../exs1/imagens/manha.png";
+          document.body.style.backgroundColor = "#F0D1A1";
+        } else if (hora >= 12 && hora < 18) {
+          msg.innerText = `Agora são ${hora} horas`;
+          img.src = "../exs1/imagens/tarde.png";
+          document.body.style.backgroundColor = "#F18A03";
+        } else if (hora >= 18 && hora < 24) {
+          msg.innerText = `Agora são ${hora} horas`;
+          img.src = "../exs1/imagens/noite.png";
+          document.body.style.backgroundColor = "#262320";
+        } else {
+          msg.innerText = "Hora invalida";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -20,9 +20,13 @@
       botao.addEventListener("click", clicar);
 
       function clicar() {
-        let valor = nome.value;
+        let n1 = nome.value;
 
-        res.innerText = "Olá, " + valor + "!";
+        if (n1 != "") {
+          res.innerText = `Olá, ${n1}!`;
+        } else {
+          res.innerText = "Digite seu nome!";
+        }
       }
     </script>
   </body>
