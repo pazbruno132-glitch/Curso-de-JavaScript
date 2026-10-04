@@ -5,71 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript</title>
     <style>
-        *{
-            padding: 0px;
-            margin: 0px;
-            box-sizing: border-box;
-        }
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+      }
 
-        body{
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: skyblue;
-        }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: skyblue;
+      }
 
-        h1{
-            color: white;
-            text-align: center;
-            margin-top: 30px;
-            margin-bottom: 30px;
-            font-size: 2.5em;
-        }
+      h1 {
+        color: white;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 2.5em;
+      }
 
-        #container{
-            background-color: white;
-            width: 600px;
-            padding: 20px;
-            border-radius: 20px;
-            margin: auto;
-        }
+      #container {
+        background-color: white;
+        width: 600px;
+        padding: 20px;
+        border-radius: 20px;
+        margin: auto;
+      }
 
-        #container form{
-            display: flex;
-            flex-flow: column nowrap;
-            align-items: flex-start;
-            gap: 20px;
-        }
+      #container form {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-start;
+        gap: 20px;
+      }
 
-        #p1{
-            text-align: center;
-            color: white;
-            font-style: italic;
-            margin-top: 30px;
-            font-size: 1.4em;
-        }
+      #p1 {
+        text-align: center;
+        color: white;
+        font-style: italic;
+        margin-top: 30px;
+        font-size: 1.4em;
+      }
     </style>
   </head>
   <body>
     <h1>Verificador de Idade</h1>
     <div id="container">
-      <form action="cadastro.py" method="post">
         <div>
-            <label for="iano">Ano de nascimento: </label>
-            <input type="number" name="ano" id="iano" required/> <br>
+          <label for="iano">Ano de nascimento: </label>
+          <input type="number" name="ano" id="iano" required /> <br />
         </div>
 
         <div>
-            <label for="isexo">Sexo: </label>
-            <input type="radio" name="sexo" id="isexo" required/>
-            <label for="isexo">Masculino</label>
-            <input type="radio" name="sexo" id="isexo2" required/>
-            <label for="isexo2">Feminino</label> <br>
+          <label for="isexo">Sexo: </label>
+          <input type="radio" name="sexo" id="isexo" required />
+          <label for="isexo">Masculino</label>
+          <input type="radio" name="sexo" id="isexo2" required />
+          <label for="isexo2">Feminino</label> <br />
         </div>
 
         <input type="submit" value="Verificar" />
 
         <p id="res">Preencha os dados acima para ver o resultado!</p>
-      </form>
     </div>
     <p id="p1">&copy; CursoemVideo</p>
+
+    <script>
+      var res = document.getElementById("res");
+      res.addEventListener("click", verificar);
+
+      function verificar() {
+        var data = new Date();
+        var ano = data.getFullYear();
+        var iano = document.getElementById("iano");
+
+        if (iano.value.length == 0 || iano.value > ano){
+            console.log('Erro')
+        }
+      }
+    </script>
   </body>
 </html>
