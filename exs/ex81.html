@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: skyblue;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      h1 {
+        color: white;
+        text-align: center;
+        margin-top: 30px;
+        font-size: 2.6em;
+      }
+
+      #container {
+        background-color: white;
+        width: 600px;
+        border-radius: 20px;
+        margin: auto;
+        padding: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Vamos contar</h1>
+    <div id="container">
+      <div id="dados">
+        <p>Inicio: <input type="number" name="n1" id="in1" /></p>
+        <p>Fim: <input type="number" name="n2" id="in2" /></p>
+        <p>Passo: <input type="number" name="n3" id="in3" /></p>
+        <p><input type="submit" value="Contar" onclick="contar()" /></p>
+      </div>
+      <div id="res">
+        <p>preparando a contagem</p>
+      </div>
+    </div>
+    <p>&copy; CursoemVideo</p>
+    <script>
+      function contar() {
+        let ini = document.getElementById("in1");
+        let fim = document.getElementById("in2");
+        let passo = document.getElementById("in3");
+        let res = document.getElementById("res");
+
+        if (
+          ini.value.length === 0 ||
+          fim.value.length === 0 ||
+          passo.value.length === 0
+        ) {
+          window.alert("ERRO, faltam dados");
+        } else {
+          let i = Number(ini.value);
+          let f = Number(fim.value);
+          let p = Number(passo.value);
+
+          for (let c = i; c <= f; c += p) {
+            res.innerHTML += `${c} \u{1F449}`;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
